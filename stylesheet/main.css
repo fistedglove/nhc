@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+/*Cascading Stylesheet for disProject 
+  Copyright Folabi Olatunde
+*/
+
+/* This reset the default margins, padding and border to zero */
+html, body, div, article, aside, section, footer, header, hgroup, nav, h1, h2, h3, h4, h5, h6, address, 
+blockquote, p, time, span, em, strong,img, ul, li, ol, video, canvas, figure{
+border: 0; margin:0; padding:0;
+}
+figure, nav, article, section, aside, summary, details, footer, figcaption, menu, hgroup, header{ display: block;}
+
+/*************************************GLOBAL STYLES************************************************/
+
+/********** Login Page Form styles *************/
+section#loginForm {width: 28em; margin: 3em 40em 8em 5em; text-align: left; 
+font-size: 1.2em; font-family: 'Adobe Garamond', Arial, Verdana, Georgia, serif; }
+section#loginForm fieldset {padding: 1em; border-radius:10px; margin-top: 1em;}
+section#loginForm input {width: 15em; background-color:#FFFFCC; margin: 1em;  }
+section#loginForm input:focus {background-color: greenyellow; }
+section#loginForm input.submit {width:7em; margin-left: 7.3em;}
+
+div.flashMessage{width:64em; border:2px solid #5F0; margin:.8em auto; background-color:#CCFF66; text-align:center}
+div.flashWarning{width:64em; border:2px solid #FF1F00; margin:.8em auto; background-color:#FFCCCC; text-align:center}
+div.flashMessage p{margin-right:6em}
+div.flashWarning p{margin-right:6em}
+
+a {text-decoration: none; color:#BA55D3;}
+
+hgroup a {text-decoration: none; color:#BA55D3;}
+
+section#mainContent{min-height: 30em;}
+
+div#pagination {text-align:center; width:30em; margin:0em auto; margin-top:4em;}
+
+
+div#searchbox {width:16em; text-align:left; position: absolute; float: right; clear: both; margin-left:53.8em; margin-top: 2.2em;}
+div#searchbox input{width:16em; border-radius:1em; height:2.1em; }
+div#searchbox input#button{ width:2.4em; height:2.3em; 
+background:url(../images/search.jpg)0em -.1em no-repeat; position:absolute; left:13.8em; top:1.5em;}
+
+div#reportTabs{width: 54em; margin: 3em auto; margin-left: 13em;}
+
+div#reportTabs ul{list-style-type: none; margin: 0; padding:0; position: relative;}
+
+div#reportTabs ul li{float: left; margin:0; padding:0; width: 7.8em;}
+
+li div { border: 1px solid #E6E6FA;opacity: 0; position: absolute; left:0; 
+ padding: 1em 1em; width:50em; visibility: hidden; background-color:#E6E6FA ;}
+
+#reportTabs li a{border:1px solid #E6E6FA; text-decoration: none; margin: 0em 0.2em 0 0; padding:0.6em 1em; z-index: 1;
+                border-radius: 0.8em 0.8em 0 0; display:block; font-size: 1em; color: #BA55D3;}
+
+#monMem:target div, #monthly:target div, #monSales:target div, #weekSales:target div, #weekly:target div, #weekMem:target div {opacity: 1; visibility: visible; background-color:#E6E6FA;}
+
+#monMem:target a, #monthly:target a, #monSales:target a, #weekSales:target a, #weekly:target a, #weekMem:target a {border-bottom:0em; top: 1px; background-color:#E6E6FA; font-weight: bold; color: #990033;}
+
+table.bookingReport{width:40em;margin: 1em auto; padding:1em; padding:.3em; }
+table.bookingReport th {border: 1px solid #FF33FF; padding: .1em; text-align: center;}
+table.bookingReport caption{font-size: 1.5em; color:#FF33FF ; text-align: center; margin-top:.5em; margin-bottom:.5em;}
+table.bookingReport td {border: 1px solid #FF33FF; padding: 0.2em; text-align: center;}
+
+div.reportFilter{text-align:left; width:34em; margin:1em auto; margin-left:18em;}
+
+div.reportFilter input[type="text"]{ background-color:#CCF; width:11em;}
+
+section#mainContent h2.report{font-size: 1.8em; color:#BA55D3; margin-top: 1em; margin-right: 6em;}
+
+section#forms {width: 35em; margin: 2.2em auto; min-height:25em; background-color: #ffffff; text-align: left; padding: 1em;
+font-size: 1.1em; font-family:'Adobe Garamond', Arial, Verdana, Georgia, serif; }
+section#forms fieldset {padding: 1em; border-radius:10px; margin: 1em ; }
+
+section#forms input {width: 15em; background-color:#FFFFCC; margin: 1em; clear: both;  }
+section#forms input.radio {width: 1em; margin:1em; clear: both; }
+section#forms input:focus {background-color: greenyellow; }
+section#forms input.submit {width:7em; margin-left: 13em;}
+section#forms label{width:9em; float: left; clear: both; padding-top: .5em;}
+section#forms p.formHeading{width: 20em; padding-left: 1em; text-align: center; font-size: 1.5em; color:#BA55D3;}
+section#forms fieldset p{width: 31em;}
+section#forms select{width: 15em; margin-left: 1em; margin-top: 1em; margin-bottom: 1em; clear: both;}
+
+p.newActivity{font-size:1.2em; text-align:right; padding-left:0em; margin-left:0em; width:13.5em;}
+
+/*************************************END GLOBAL STYLES************************************************/
+
+/***************************************SALES STAFF STYLES ********************************************************/
+
+/* Generic Layout Styles */
+
+body {font-family: Georgia, "Time New Roman", Times, serif; font-size: 100%; 
+text-align: center; background-color: #CCCCFF;}
+
+#wrapper {width: 70em; margin: 0em auto;
+/*border: 2px solid blueviolet; border-top-left-radius: 
+1em; border-top-right-radius: 1em; border-bottom-left-radius: 1em; 
+border-bottom-right-radius: 1em;*/ background-color: #FFF;}
+
+header#mainHeading {height: 8.5em; border-bottom:2px solid blueviolet; margin: 0em auto;
+background: url(../images/logo3.png) 0em center no-repeat; padding-bottom: .5em; width: 64em;}
+
+header#mainHeading hgroup{ text-align:left; width:39em; padding-top:1em; padding-left:12em; letter-spacing:.1em}
+header#mainHeading h1{ font-size: 2.7em; color:#BA55D3;}
+header#mainHeading h2{ font-size: 1.4em; font-style: italic; color:#D82F5C; font-family:"Times New Roman", Times, serif;}
+#footer {width: 64em; height: 5em; margin-top: 5em; padding-top: 1em; margin: 0em auto; border-top: 2px solid blueviolet; }
+
+nav#topNav ul {list-style-type: none; position:relative ; left: 12.3em; top: 1.7em; float: left;font-size:1em; 
+font-family: 'Adobe Garamond', Arial, Verdana, Georgia, serif;}
+nav#topNav ul li { float: left; }
+
+nav#topNav ul li a {text-decoration: none; border: 2px solid #99FFFF; letter-spacing: .1em;
+padding:.5em; display: block; color: #9900FF; margin-right:.2em; border-radius: 1em;}
+
+ /**nav#topNav ul li a.last{border-right: none;}*/
+
+
+/* Client Display Styles */
+section#client {width: 35em; margin: 3em auto; background-color: #ffffff; text-align: left; padding: 1em;
+font-size: 1.15em; font-family:'Adobe Garamond', Arial, Verdana, Georgia, serif; }
+section#client fieldset {padding: 1em; border-radius:10px; margin: 1em ; }
+section#client input {width: 15em; background-color:#FFFFCC; margin: 1em; clear: both;  }
+section#client input.radio {width: 1em; margin:1em; clear: both; }
+section#client label{width:9em; float: left; clear: both; padding-top: .5em;}
+section#client p{width: 20em; padding-left: 1em;}
+section#client fieldset p{width: 31em;}
+
+
+/* Booking Record Form */
+section#bookingForm {width: 35em; margin: 3em auto; min-height: 25em; background-color: #ffffff; text-align: left; padding: 1em;
+font-size: 1.1em; font-family:'Adobe Garamond', Arial, Verdana, Georgia, serif; }
+section#bookingForm fieldset {padding: 1em; border-radius:10px; margin: 1em ; }
+
+section#bookingForm input {width: 15em; background-color:#FFFFCC; margin: 1em; clear: both;  }
+section#bookingForm input:focus {background-color: greenyellow; }
+section#bookingForm input.submit {width:7em; margin-left: 14.3em;}
+section#bookingForm label{width:9em; float: left; clear: both; padding: .5em; }
+section#bookingForm p{width: 20em; padding-left: 1em;}
+section#bookingForm fieldset p{width: 31em;}
+section#bookingForm select{width: 15em; margin-left: 1em; clear: both; margin: 1em;}
+
+
+/*************Sales Table *******************/
+section#salesTable{width:55em; font-size: 1em; height: 20em; border: 1px solid #FF00CC; border-radius: 1em; 
+background-color: #FFFFFF; margin: 1em auto; 
+font-family:'Adobe Garamond' Verdana, Georgia, 'Times New Roman', serif; }
+table.salesTbl{width:55em; border-collapse: collapse; border: 2px solid #FF33FF; margin: 1em auto; padding:.2em;}
+table.salesTbl th {border: 2px solid #FF33FF; padding: .2em;}
+table.salesTbl caption{font-size: 1.2em; text-align: center; margin: 1em;}
+table.salesTbl th.task {width: 10em;}
+
+
+/******Bookings Table ******/
+section#bookingTablesales{width:61em; font-size: 1em; margin: 1em auto; padding: 1em; padding-top: .3em; 
+font-family:'Adobe Garamond' Verdana, Georgia, 'Times New Roman', serif; }
+section#bookingTablesales table.bookingTbl{width:61em; margin: 2em auto; padding:.2em;}
+section#bookingTablesales table.bookingTbl th {border: 1px solid #FF33FF; padding: .1em; text-align: center;}
+section#bookingTablesales table.bookingTbl caption{font-size: 1.5em; color:#FF33FF ; text-align: center; margin-top:.5em; margin-bottom:.5em;}
+section#bookingTablesales table.bookingTbl td {border: 1px solid #FF33FF; padding: .1em; }
+section#bookingTablesales table.bookingTbl tr {padding:2em;}
+
+
+section#bookingTablesales table.activityTbl{width:40em; margin: 2em auto; padding:.2em;}
+section#bookingTablesales table.activityTbl th {border: 1px solid #FF33FF; padding: .1em; text-align: center;}
+section#bookingTablesales table.activityTbl caption{font-size: 1.5em; color:#FF33FF ; text-align: center; margin-top:.5em; margin-bottom:.5em;}
+section#bookingTablesales table.activityTbl td {border: 1px solid #FF33FF; padding: .1em; }
+section#bookingTablesales table.activityTbl tr {padding:2em;}
+
+
+/***************************************NATIONAL MANAGER STYLES ********************************************************/
+/*****Generic Layout Style*****/
+
+body.NM {font-family: Georgia, "Time New Roman", Times, serif; font-size: 100%; 
+text-align: center; background-color:#CCCC99;}
+
+#wrapperNM {margin: 0em auto; width: 70em;
+position: relative; background-color: #FFFFFF;}
+
+header#mainHeadingNM {height: 8.5em; border-bottom:2px solid blueviolet; margin: 0em auto;
+background: url(../images/logo3.png) 0em center no-repeat; padding-bottom: 0.5em; width: 64em;  }
+
+header#mainHeadingNM hgroup{ text-align:left; width:39em; padding-top:1em; padding-left:12em; letter-spacing:.1em}
+header#mainHeadingNM h1{ font-size: 2.7em; color:#BA55D3;;}
+header#mainHeadingNM h2{ font-size: 1.4em; font-style: italic; color:#D82F5C; font-family:"Times New Roman", Times, serif;}
+#footerNM {width: 62em; height: 1em; margin:0 auto; margin-top: 5em; padding: 1em 1em; border-top: 2px solid blueviolet; }
+
+section#sideNavNM {width: 9.6em; float: left; margin-top: 4.5em; clear: both; }
+
+
+section#sideNavNM ul {list-style-type: none; text-align: left; font-size:1em; font-family: 'Adobe Garamond', Arial, Verdana, Georgia, serif;}
+section#sideNavNM ul li {width: 9.2em;}
+
+section#sideNavNM ul li a {text-decoration: none; border: 2px solid #CCCC33; border-left: none; border-right: none;
+border-radius:2em; margin-top: .5em; 
+padding:.5em; display: block; background-color: #ffffff; color: #990066; line-height:1em;}
+
+
+
+
+
+/********Client Registration Page Style ****************/
+
+section#formsNM {width: 35em; margin: 3em auto; background-color: #ffffff; text-align: left; padding: 1em;
+font-size: 1.1em; font-family:'Adobe Garamond', Arial, Verdana, Georgia, serif; }
+section#formsNM fieldset {padding: 1em; border-radius:10px; margin: 1em ; }
+
+section#formsNM input {width: 15em; background-color:#FFFFCC; margin: 1em; clear: both;  }
+section#formsNM input.radio {width: 1em; margin:1em; clear: both; }
+section#formsNM input:focus {background-color: #FFFF99; }
+section#formsNM input.submit {width:7em; margin-left: 13em;}
+section#formsNM label{width:9em; float: left; clear: both; padding-top: .5em;}
+section#formsNM p{width: 20em; padding-left: 1em;}
+section#formsNM fieldset p{width: 31em;}
+section#formsNM select{width: 10em; margin-left: 1em; margin-top: 1em; margin-bottom: 1em; clear: both;}
+
+
+/******** Client Display Styles ****************/
+section#clientNM {width: 35em; margin: 3em auto; background-color: #ffffff; text-align: left; padding: 1em;
+font-size: 1.15em; font-family:'Adobe Garamond', Arial, Verdana, Georgia, serif; }
+section#clientNM fieldset {padding: 1em; border-radius:10px; margin: 1em ; }
+section#clientNM input {width: 15em; background-color:#FFFFCC; margin: 1em; clear: both;  }
+section#clientNM input.radio {width: 1em; margin:1em; clear: both; }
+section#clientNM label{width:9em; float: left; padding-top: .5em;}
+section#clientNM p{width: 20em; padding-left: 1em;}
+section#clientNM fieldset p{width: 31em;}
+
+
+section#bookingTablenm{width:59em; font-size: 1em; min-height: 30em;
+background-color: #FFFFFF; margin-left: 10em; margin-top:.5em; 
+font-family:Georgia, 'Times New Roman', serif; padding:.2em; }
+
+section#bookingTablenm table.bookingTbl{margin: 1em 0em; padding:1em; padding:.3em;margin-left: 0em; }
+section#bookingTablenm table.bookingTbl th {border: 1px solid #FF33FF; padding: .1em; text-align: center;}
+section#bookingTablenm table.bookingTbl caption{font-size: 1.5em; color:#FF33FF ; text-align: center; margin-top:.5em; margin-bottom:.5em;}
+section#bookingTablenm table.bookingTbl td {border: 1px solid #FF33FF; padding: 0.2em;}
+section#bookingTablenm p.addStaff{font-size: 1.2em; text-align: left;margin-left: 4.1em}
+
+section#bookingTablenm table.staffTbl{margin: 1em 0em; padding:1em; padding:.3em; margin-left: 4.5em; }
+section#bookingTablenm table.staffTbl th {border: 1px solid #FF33FF; padding: .1em; text-align: left;}
+section#bookingTablenm table.staffTbl caption{font-size: 1.5em; color:#FF33FF ; text-align: center; margin-top:.5em; margin-bottom:.5em;}
+section#bookingTablenm table.staffTbl td {border: 1px solid #FF33FF; padding: 0.2em;}
+
+/************ Booking Record Form ****************/
+section#bookingFormNM {width: 35em; margin: 3em auto; background-color: #ffffff; text-align: left; padding: 1em;
+font-size: 1.1em; font-family:'Adobe Garamond', Arial, Verdana, Georgia, serif; }
+section#bookingFormNM fieldset {padding: 1em; border-radius:10px; margin: 1em ; }
+
+section#bookingFormNM input {width: 15em; background-color:#FFFFCC; margin: 1em; clear: both;  }
+section#bookingFormNM input:focus {background-color: #FFFF99; }
+section#bookingFormNM input.submit {width:7em; margin-left: 14.3em;}
+section#bookingFormNM label{width:9em; float: left; clear: both; padding: .5em; }
+section#bookingFormNM p{width: 20em; padding-left: 1em;}
+section#bookingFormNM fieldset p{width: 31em;}
+section#bookingFormNM select{width: 15em; margin-left: 1em; clear: both; margin: 1em;}
+
+
+/* Record Sale Form */
+section#saleFormNM {width: 35em; margin: 3em auto; text-align: left; padding: 1em;
+font-size: 1.1em; background-color: #ffffff; font-family:'Adobe Garamond', Arial, Verdana, Georgia, serif; }
+section#saleFormNM fieldset {padding: 1em; border-radius:10px; margin: 1em ; }
+
+section#saleFormNM input {width: 15em; background-color:#FFFFCC; margin: 1em; clear: both;  }
+section#saleFormNM input:focus {background-color: #FFFF99; }
+section#saleFormNM input.submit {width:7em; margin-left: 16.5em;}
+section#saleFormNM label{width:10.5em; float: left; clear: both; padding: .5em; }
+section#saleFormNM p{width: 20em; padding-left: 1em;}
+section#saleFormNM fieldset p{width: 31em;}
+section#saleFormNM select{width: 15em; margin-left: 1em; clear: both; margin: 1em;}
+
+
+/*************Sales Table *******************/
+section#salesTableNM{width:55em; font-size: 1em; height: 20em; border: 1px solid #FF00CC; border-radius: 1em; 
+background-color: #FFFFFF; margin-left: 13em; margin-top:5em; 
+font-family:'Adobe Garamond' Verdana, Georgia, 'Times New Roman', serif; }
+table.salesTblNM{width:55em; border-collapse: collapse; border: 2px solid #FF33FF; margin: 1em auto; padding:.2em;}
+table.salesTblNM th {border: 2px solid #FF33FF; padding: .2em;}
+table.salesTblNM caption{font-size: 1.2em; text-align: center; margin: 1em;}
+table.salesTblNM th.task {width: 10em;}
+
+section#bookingTablenm table.activityTbl{width:40em; margin: 2em auto; padding:.2em;}
+section#bookingTablenm table.activityTbl th {border: 1px solid #FF33FF; padding: .1em; text-align: center;}
+section#bookingTablenm table.activityTbl caption{font-size: 1.5em; color:#FF33FF ; text-align: center; margin-top:.5em; margin-bottom:.5em;}
+section#bookingTablenm table.activityTbl td {border: 1px solid #FF33FF; padding: .1em; }
+section#bookingTablenm table.activityTbl tr {padding:2em;}
